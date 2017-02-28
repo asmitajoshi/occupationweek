@@ -1,0 +1,67 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style>
+div.circle {
+    border: 3px solid red;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+h1 span {
+  font: 26px Monaco, MonoSpace;
+  height: 200px;
+  position: absolute;
+  width: 20px;
+  left: 0;
+  top: 0;
+  transform-origin: bottom center;
+}
+</style>
+<script type="text/javascript">
+    function changeColor(newColor) {
+        var elem = document.getElementById('mycolor');
+        elem.style.color = newColor;
+    }
+    function play() {
+        var audio = document.getElementById("audio");
+        audio.play()
+    }
+    var printThis = "asjkdakjsndkajnsd";
+    function mousePressed(e) {
+        var kids = ['Akash', 'ArjunP', 'ArjunJ', 'Anvita', 'Keya', 'Mihir', 'Krisha', 'Albert'];
+        kids.forEach(function(item, index, array) {
+            if (item.startsWith(document.getElementById('letter').value)) {
+                printThis += "<br>" + item;
+            }
+        });
+        
+    }
+    function register() {
+        var node = document.getElementById("write");
+        node.innerHTML = printThis;
+        window.console.log("printthis " + printThis);
+        var h = document.createElement("H1");
+        var t = document.createTextNode(printThis);
+        h.appendChild(t); 
+        printThis = "";
+
+    }
+</script>
+</head>
+<body>
+<div class=circle></div>
+<p id="mycolor">Happy Birthday To You!</p>
+<button onclick="changeColor('blue');">blue</button>
+<button onclick="changeColor('red');">red</button>
+<button value="Play" onclick="play()">Song!</button>
+<audio id="audio" src="Woody_Guthrie_-_This_Land.ogg"></audio>
+<br>
+<input name="Name" type="text" id="letter"></input>
+<input type="button" onClick="mousePressed();" value="Letter"></input>
+<p id="write"></p>
+</body>
+</html>
