@@ -3,7 +3,7 @@
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <style>
 div.circle {
-    border: 3px solid ;
+    border: 93px solid ;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -16,12 +16,15 @@ div.circle {
     function changeColor(newColor) {
         var elem = document.getElementById('mycolor');
         elem.style.color = newColor;
+        var colorA = ['red', 'green', 'yellow'];
+        var num = Math.floor(Math.random() * colorA.length);
+        var acolor = colorA[num];
         elem = document.getElementById('circle1');
-        elem.style.borderColor = newColor;
+        elem.style.borderColor = acolor;
         elem = document.getElementById('circle2');
-        elem.style.borderColor = newColor;
+        elem.style.borderColor = colorA[(num + 1) % colorA.length];
         elem = document.getElementById('circle3');
-        elem.style.borderColor = newColor;
+        elem.style.borderColor = colorA[(num + 2) % colorA.length];
     }
 </script>
 </head>
