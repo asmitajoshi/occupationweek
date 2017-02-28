@@ -5,9 +5,13 @@
 <script type="text/javascript">
     var printThis = "";
     function mousePressed(e) {
-        var kids = ['Akash', 'ArjunP', 'ArjunJ', 'Anvita', 'Keya', 'Mihir', 'Krisha', 'Albert', 'Deeksha', 'Kyson'];
+        var kids = ['Akash', 'ArjunP', 'ArjunJ', 
+                    'Anvita', 'Keya', 'Mihir', 
+                    'Krisha', 'Albert', 'Deeksha', 
+                    'Kyson', 'Madhumita', 'Ms Mampa', 
+                    'Ms Sweta'];
         kids.forEach(function(item, index, array) {
-            if (item.startsWith(document.getElementById('letter').value)) {
+            if (item.toUpperCase().startsWith(document.getElementById('letter').value.toUpperCase())) {
                 printThis += "<br>" + item;
             }
         });
