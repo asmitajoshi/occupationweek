@@ -1,0 +1,23 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript">
+    window.onload = function() { function getRandomImage() {
+        var imgArr = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
+        path = 'images/';
+        var num = Math.floor(Math.random() * imgArr.length);
+        var img = imgArr[num];
+        var image = new Image();
+        image.src = path + img;
+        image.width = "800";
+        image.height = "600";
+        document.body.appendChild(image);
+
+    }
+getRandomImage();
+}
+</script>
+</head>
+<body>
+</body>
+</html>
