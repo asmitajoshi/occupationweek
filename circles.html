@@ -16,6 +16,14 @@ div.circle {
     function changeColor(newColor) {
         var elem = document.getElementById('mycolor');
         elem.style.color = newColor;
+        elem = document.getElementById('circle1');
+        elem.style.borderColor = newColor;
+        elem = document.getElementById('circle2');
+        elem.style.borderColor = newColor;
+        elem = document.getElementById('circle3');
+        elem.style.borderColor = newColor;
+    }
+    function disco() {
         var colorA = ['red', 'green', 'yellow'];
         var num = Math.floor(Math.random() * colorA.length);
         var acolor = colorA[num];
@@ -26,6 +34,7 @@ div.circle {
         elem = document.getElementById('circle3');
         elem.style.borderColor = colorA[(num + 2) % colorA.length];
     }
+//<button onclick="disco();">Lights!</button>
 </script>
 </head>
 <body>
